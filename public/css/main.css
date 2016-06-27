@@ -1,0 +1,183 @@
+/* Colors
+	$dark-blue: #282c37;
+	$primary-blue: #2b90d9;
+	$light-blue: #9baec8;
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+}
+
+body {
+	font-family: Montserrat , 'open sans', sans-serif;
+	font-size: 14px;
+}
+
+/* Helper Classes */
+.clear {
+	clear: both;
+}
+.blue {
+	color:  #2b90d9;
+	font-weight: 300;
+}
+
+.center {
+	text-align: center;
+}
+
+.card {
+	border-radius: 5px;
+	box-shadow: 0px 3px 5px rgba(154,174,200,.35);
+	padding: 0px;
+	width: 30%;
+	margin-left: 3%;
+
+}
+
+.card .content {
+	padding-left: 30px;
+	padding-bottom: 40px;
+}
+
+.feature {
+	text-align: center;
+	box-shadow: 0px 2px 30px 1px rgba(0, 0, 0, 0.2);	
+	background: #fff;
+	width: 23%;
+	margin-left: 2%;
+	border-radius: 4px;
+	padding: 40px 30px;
+	height: 235px;
+}
+
+/* HTML Elements */
+nav {
+	background: #282c37;
+	color: #fff;
+	width: 100%;
+	padding: 24px 0px;
+}
+
+nav ul li {
+	display: inline;
+	color: #fff;
+	margin: 0;
+}
+
+nav ul li a {
+	color:#fff;	
+	margin-left: 40px;
+}
+
+nav ul li.cta a {
+	margin-left: 0;
+}
+
+nav ul li a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul {
+	float: right;
+	margin-top: 20px;
+	margin-right: 60px;
+}
+
+input {
+	background: #fff;
+	border: none;
+}
+
+/* Font styles */
+h2 {
+	font-size: 30px;
+	color: #282c37;
+	font-weight: 500;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 400;
+	margin-top: 28px;
+	margin-bottom: 15px;
+}
+
+.card h5 {
+	display: inline;
+}
+
+span.like {
+	float: right;
+	margin-right: 30px;
+}
+/* Site Elements */
+.logo {
+	display: inline;
+	margin-left: 60px;
+}
+
+.cta {
+	background: #2b90d9;
+	border-radius: 5px;
+	padding: 10px 30px;
+	margin-left: 35px;
+}
+
+.jumbotron {
+	background: url(../img/hero-bg.jpg) no-repeat;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	padding-top: 110px;
+	padding-bottom: 160px;
+}
+
+.jumbotron h1 {
+	font-weight: 100;
+	font-size: 60px;
+	text-shadow: 0px 1px 6px rgba(85,85,85,.35);
+	margin-bottom: 60px;
+}
+input.search {
+	padding: 12px 30px;
+	border-radius: 3px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 200;
+	color: #9baec8;
+}
+
+section.features {
+	background: #d9e1e8;
+	padding-bottom: 80px;
+}
+
+footer {
+	background: #282c37;
+	color: #d9e1e8;
+	padding: 30px 0px;
+	font-size: 14px;
+}
+
+ul.bottom-nav li {
+	display: inline;
+	margin-left: 15px;
+}
+
+ul.bottom-nav li a {
+	color: #d9e1e8;
+}
+
+ul.bottom-nav {
+	float: right;
+}
