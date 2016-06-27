@@ -12,16 +12,29 @@ $sql = 'CREATE TABLE IF NOT EXISTS users (
 ';
 
 if(mysqli_query($db, $sql)) {
-	echo "User Table Created";
+	echo "User Table Created <br>";
 }
 else
 {
-	echo "Something went wrong.";
+	echo "Something went wrong. <br>";
 }
 
 // Events table
 $sql = 'CREATE TABLE IF NOT EXISTS events (
-		id INT(11) AUTO_INCREMENT NOT NULL,
-		email VARCHAR(256) NOT NULL,
-		
-		'
+			id INT(11) AUTO_INCREMENT NOT NULL,
+			name VARCHAR(256) NOT NULL,
+			date DATE NOT NULL,
+			organiser VARCHAR(256) NOT NULL,
+			description TEXT NOT NULL,
+			city VARCHAR(256) NOT NULL,
+			location VARCHAR(512) NOT NULL,
+			PRIMARY KEY(id)
+		);
+';
+
+if(mysqli_query($db, $sql)) {
+	echo "events table created <br>";
+} else {
+	echo mysqli_error($db);;
+	echo "Error while creating events table <br>";
+}
