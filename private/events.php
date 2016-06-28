@@ -34,8 +34,7 @@ class Event {
             }
             
             $target_file = uniqid() . $extension;
-            echo $target_file;
-            $upload_dir = "../public/img/events/";
+            $upload_dir = "../img/events/";
 
             if(move_uploaded_file($tmp_file, $upload_dir . $target_file)) {
                 $this->image = "img/events/" . $target_file;

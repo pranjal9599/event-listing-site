@@ -1,6 +1,6 @@
 <?php include('../../private/init.php'); ?>
 <?php 
-	
+	$alert = '';
 	if(isset($_POST['submit']) && $_POST['submit'] != '') {
 
 		$name = htmlspecialchars($_POST['name']);
@@ -14,15 +14,19 @@
 		$event->upload_image();
 
 		if ($event->create()) {
-			echo "Success!";
+			$alert = 'Event Created Successfully';
 		} else {
-			echo "Failed";
+			$alert = 'Some error occurs';
 		}
 	}
 
 
 ?>
 <?php include_once('../../private/layouts/header-admin.php'); ?>
+
+<script>
+	alert('<?php echo $alert; ?>');
+</script>
 
 <div class="container">
 	<div class="row">
