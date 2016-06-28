@@ -28,6 +28,7 @@ $sql = 'CREATE TABLE IF NOT EXISTS events (
 			description TEXT NOT NULL,
 			city VARCHAR(256) NOT NULL,
 			location VARCHAR(512) NOT NULL,
+			image VARCHAR(256) NOT NULL,
 			PRIMARY KEY(id)
 		);
 ';

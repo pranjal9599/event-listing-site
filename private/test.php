@@ -67,13 +67,23 @@ require('init.php');
 // }
 
 if( isset($_POST['submit']) ) {
-	var_dump($_POST);
-	var_dump($_FILES);
+    $event = new Event();
+    $event->upload_image();
+//
+//	if($_FILES['image']['type'] == "image/jpeg" || $_FILES['image']['type'] == "image/png" && ($_FILES['image']['size'] * 0.000000954) < 20) {
+//		$tmp_file = $_FILES['image']['tmp_name'];
+//
+//		$target_file = uniqid() . '.jpg';
+//		echo $target_file;
+//		$upload_dir = "../public/img/events/";
+//		
+//		if(move_uploaded_file($_FILES['image']['tmp_name'], $upload_dir . $target_file)) {
+//			echo "DOne";
+//		} else {
+//			echo $_FILES['image']['error'];
+//			echo "..hmm";
+//		}
+        
+    
+    }
 
-	if($_FILES['image']['type'] == "image/jpeg" || $_FILES['image']['type'] == "image/png") {
-		$_FILES['image']['size'] *= 0.000000954;
-		echo $_FILES['image']['size'] . '<br>';
-	}
-
-	echo uniqid();
-}
