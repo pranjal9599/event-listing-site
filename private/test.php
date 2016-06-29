@@ -66,24 +66,27 @@ require('init.php');
 // 	echo "Event Creation Failed";
 // }
 
-if( isset($_POST['submit']) ) {
-    $event = new Event();
-    $event->upload_image();
-//
-//	if($_FILES['image']['type'] == "image/jpeg" || $_FILES['image']['type'] == "image/png" && ($_FILES['image']['size'] * 0.000000954) < 20) {
-//		$tmp_file = $_FILES['image']['tmp_name'];
-//
-//		$target_file = uniqid() . '.jpg';
-//		echo $target_file;
-//		$upload_dir = "../public/img/events/";
-//		
-//		if(move_uploaded_file($_FILES['image']['tmp_name'], $upload_dir . $target_file)) {
-//			echo "DOne";
-//		} else {
-//			echo $_FILES['image']['error'];
-//			echo "..hmm";
-//		}
+// if( isset($_POST['submit']) ) {
+//     $event = new Event();
+//     $event->upload_image();
+// //
+// //	if($_FILES['image']['type'] == "image/jpeg" || $_FILES['image']['type'] == "image/png" && ($_FILES['image']['size'] * 0.000000954) < 20) {
+// //		$tmp_file = $_FILES['image']['tmp_name'];
+// //
+// //		$target_file = uniqid() . '.jpg';
+// //		echo $target_file;
+// //		$upload_dir = "../public/img/events/";
+// //		
+// //		if(move_uploaded_file($_FILES['image']['tmp_name'], $upload_dir . $target_file)) {
+// //			echo "DOne";
+// //		} else {
+// //			echo $_FILES['image']['error'];
+// //			echo "..hmm";
+// //		}
         
     
-    }
+//     }
+// echo get_lat_long('Dlf Phase 4, Gurgaon');
 
+$event = Event::find_by_id(3);
+var_dump($event);

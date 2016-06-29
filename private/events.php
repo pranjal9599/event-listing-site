@@ -14,12 +14,12 @@ class Event {
     public $image;
 
     public function __construct($name='', $date='', $organiser='', $description='', $city='', $location='') {
-        $this->name = $name;
-        $this->date = $date;
-        $this->organiser = $organiser;
+        $this->name = htmlentities($name);
+        $this->date = htmlentities($date);
+        $this->organiser = htmlentities($organiser);
         $this->description = $description;
-        $this->city = $city;
-        $this->location = $location;
+        $this->city = htmlentities($city);
+        $this->location = htmlentities($location);
     }
 
     public function upload_image() {
@@ -46,23 +46,33 @@ class Event {
         
         $_SESSION['error'] = "Please choose an image only.";
         return false;
-        exit();
     }
     
 
     public function create() {
-            global $db;
-            $sql = "INSERT INTO events(name, date, organiser, description, city, location, image) VALUES(
-                    '$this->name', '$this->date', '$this->organiser', '$this->description', '$this->city', '$this->location', '$this->image'); 	
-            ";
+        global $db;
+        $sql = "INSERT INTO events(name, date, organiser, description, city, location, image) VALUES(
+                '$this->name', '$this->date', '$this->organiser', '$this->description', '$this->city', '$this->location', '$this->image'); 	
+        ";
 
-            if(mysqli_query($db, $sql)) {
-                    return true;
-            } else {
-                    echo mysqli_error($db);
-                    return false;
-            }
+        if(mysqli_query($db, $sql)) {
+                return true;
+        } else {
+                echo mysqli_error($db);
+                return false;
+        }
     }
 
+    static function find_by_id($id) {
+        global $db;
+        $id = mysqli_real_escape_string($db, $id);
+
+        $sql = "SELECT * FROM events WHERE id='{$id}';";
+        if($result = mysqli_query($db, $sql)) {
+            $data = mysqli_fetch_assoc($result);
+            return $data;
+        }
+        return false;
+    }
 
 }

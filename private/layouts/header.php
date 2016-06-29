@@ -14,17 +14,14 @@
 		<nav>
 			<div class="logo"><img src="img/logo.png" alt="G"></div>
 			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#loginModal">Login</a></li>
-				<li><a href="#">Contact Us</a></li>
-				<li class="cta"><a href="#" data-toggle="modal" data-target="#signupModal">Sign Up</a></li>
+				<li><a href="#">All Events</a></li>
+				<li><a href="#">Create Events</a></li>
+				<li><a href="#">Sign Out</a></li>
 			</ul>
 			<div class="clear"></div>
 		</nav>
 		
-		<div class="jumbotron">
-			<h1>Lets Meet Great <span class="blue">People</span></h1>
-			<input type="text" placeholder="Search for great things...." class="search">
-		</div>
+
+		
 
 	</div>

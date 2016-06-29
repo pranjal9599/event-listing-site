@@ -18,6 +18,12 @@ body {
 	font-size: 14px;
 }
 
+p {
+	font-weight: 300;
+	line-height: 1.8;
+	font-size: 16px;
+}
+
 /* Helper Classes */
 .clear {
 	clear: both;
